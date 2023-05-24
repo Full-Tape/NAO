@@ -5,7 +5,7 @@ fetch(`${API}/card.json`)
 
 function showInfo(data) {
   let allCards = data.cards;
-  console.table(allCards)
+  console.table(allCards);
   const placesContainer = document.querySelector(".sectionCards");
   const placeTemplate = document.querySelector(".template");
 
