@@ -25,7 +25,7 @@ function showInfo(data) {
   function renderCard({firstName,secondName,thirdName,dateOfBirth}) {
     const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
     placeElement.querySelector(".card__title").textContent = firstName;
-    placeElement.querySelector(".card__dateOfBirth").textContent = dateOfBirth;
+    placeElement.querySelector(".card__dateOfBirth").textContent = "Дата рождения: " + dateOfBirth;
 
     placesContainer.prepend(placeElement);
   }
