@@ -1,0 +1,60 @@
+/* main */
+.main {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 30px 40px;
+}
+.aside {
+  background-color: #ffffff9c;
+  padding: 20px;
+  position: relative;
+}
+.aside__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.aside__form-input {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  border-bottom: #2a2a2a 1px solid;
+  color: #2a2a2a;
+}
+.aside__form-input:focus {
+  outline: none;
+}
+.aside__form-btn {
+  border: none;
+  cursor: pointer;
+}
+.sectionCards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: start;
+  align-items: center;
+  gap: 40px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  max-width: 250px;
+  width: 100%;
+}
+.card__img {
+  width: 100%;
+}
+.card__wrapper {
+  padding: 10px;
+}
+.card__title {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+.card__description {
+  margin: 10px 0;
+  white-space: nowrap;
+}

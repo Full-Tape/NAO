@@ -1,0 +1,33 @@
+/* main */
+.main {
+  position: relative;
+}
+.section {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.sectionNAO {
+  background-color: #add8e69c;
+  left: 0;
+}
+.sectionRU {
+  background-color: #ce2b309c;
+  right: 0;
+}
+.section__link {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.section__link-img {
+  width: 100%;
+}
+.section__link-text {
+  text-align: center;
+}
