@@ -1,11 +1,16 @@
 {
     "cards": [
         {
-            "image":"https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+            "image":"/img/face.jpg",
             "firstName": "Васильев",
             "secondName": "Данил",
             "thirdName": "Юрьевич",
-            "dateOfBirth": "17.09.2000"
+            "placeOfBirth": "Мурманск",
+            "dateOfBirth": "17.09.2000",
+            "rank": "Рядовой",
+            "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
         }
     ]
 }
