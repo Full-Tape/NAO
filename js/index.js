@@ -5,13 +5,14 @@ fetch(`${API}/card.json`)
 
 function showInfo(data) {
   let allCards = data.cards;
+  console.log(allCards)
   const placesContainer = document.querySelector(".sectionCards");
   const placeTemplate = document.querySelector(".template");
 
   let itemCards = Object.entries(allCards).reverse();
 
   for (let [key, value] of itemCards){
-    renderCard(value)
+    // renderCard(value)
   };
 
   function renderCard({image,firstName,secondName,thirdName,placeOfBirth,dateOfBirth,rank,placeOfCall,dateDeath,deathPlace}) {
@@ -27,8 +28,21 @@ function showInfo(data) {
 
     placesContainer.prepend(placeElement);
   }
-}
 
+
+
+  function findCard(firstName){
+    for (let [key, value] of itemCards){
+        if(value.firstName === firstName)
+            renderCard(value)
+        
+    };
+  }
+
+  findCard("Васильев")
+
+}
+// fName.firstName === firstName
 //   const placeInfo = allCards.map(function (item) {
 //     return {
 //       image: item.image,
