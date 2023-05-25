@@ -55,7 +55,7 @@ a {
 /* main */
 .main {
   flex-grow: 1;
-  background: url("/img/background.jpg") 50% 50% no-repeat;
+  background: url("/background.jpg") 50% 50% no-repeat;
   background-size: cover;
 }
 
