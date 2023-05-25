@@ -83,14 +83,23 @@
               id="deathPlace"
               placeholder="Место смерти"
             />
-            <button class="aside__form-btn btn" type="submit">Поиск</button>
+            <button class="aside__form-btn btn" name="btnFilter" type="submit">Поиск</button>
           </form>
         </aside>
-        <section class="sectionCards">
+        <section class="allCards sectionCards">
 
         </section>
+        <section class="findCards sectionCards sectionHidden">
 
-        <section class="template">
+        </section>
+        <section class="invalidFind sectionHidden">
+          <h1 class="invalidFind__title">Герой не найден.</h1>
+          <a class="invalidFind__link" href="https://pamyat-naroda.ru/">
+            <img class="invalidFind__link-img" src="img/orden.png" alt="pamyatNaroda">
+            <p class="invalidFind__link-text btn">Перейти на федеральный сайт</p>
+          </a>
+        </section>
+        <section class="template sectionHidden">
           <a class="card">
             <img class="card__img"/>
             <div class="card__wrapper">
