@@ -14,10 +14,10 @@ function showInfo(data) {
     renderCard(value)
   };
 
-  function renderCard({image,names,placeOfBirth,dateOfBirth,rank,placeOfCall,dateDeath,deathPlace}) {
+  function renderCard({image,firstName,secondName,thirdName,placeOfBirth,dateOfBirth,rank,placeOfCall,dateDeath,deathPlace}) {
     const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
     placeElement.querySelector(".card__img").src = image != ("" && undefined) ? image : "img/face.jpg";
-    placeElement.querySelector(".card__title").textContent = names;
+    placeElement.querySelector(".card__title").textContent = `${firstName} ${secondName} ${thirdName}`;
     placeElement.querySelector(".card__placeOfBirth").textContent = `Место рождения: ${placeOfBirth != ("" && undefined) ? placeOfBirth : "Неизвестно"}`;
     placeElement.querySelector(".card__dateOfBirth").textContent = `Дата рождения: ${dateOfBirth != ("" && undefined) ? dateOfBirth: "Неизвестно"}`;
     placeElement.querySelector(".card__rank").textContent = `Звание: ${rank != ("" && undefined) ? rank: "Неизвестно"}`;
