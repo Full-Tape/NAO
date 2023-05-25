@@ -28,14 +28,14 @@ function showInfo(data) {
 
   function renderCard({image,name,placeOfBirth,dateOfBirth,rank,placeOfCall,dateDeath,deathPlace}) {
     const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
-    placeElement.querySelector(".card__img").src = image;
+    placeElement.querySelector(".card__img").src = image != "" ? image : "img/face.jpg";
     placeElement.querySelector(".card__title").textContent = name;
-    placeElement.querySelector(".card__placeOfBirth").textContent = "Место рождения: " + placeOfBirth;
-    placeElement.querySelector(".card__dateOfBirth").textContent = "Дата рождения: " + dateOfBirth;
-    placeElement.querySelector(".card__rank").textContent = "Звание: " + rank;
-    placeElement.querySelector(".card__placeOfCall").textContent = "Место призыва: " + placeOfCall;
-    placeElement.querySelector(".card__dateDeath").textContent = "Дата смерти: " + dateDeath ? null: "Неизвестно";
-    placeElement.querySelector(".card__deathPlace").textContent = "Место смерти: " + deathPlace ? null: "Неизвестно";
+    placeElement.querySelector(".card__placeOfBirth").textContent = `Место рождения: ${placeOfBirth != "" ? placeOfBirth : "Неизвестно"}`;
+    placeElement.querySelector(".card__dateOfBirth").textContent = `Дата рождения: ${dateOfBirth != "" ? dateOfBirth: "Неизвестно"}`;
+    placeElement.querySelector(".card__rank").textContent = `Звание: ${rank != "" ? rank: "Неизвестно"}`;
+    placeElement.querySelector(".card__placeOfCall").textContent = `Место призыва: ${placeOfCall != "" ? placeOfCall: "Неизвестно"}`;
+    placeElement.querySelector(".card__dateDeath").textContent = `Дата смерти: ${dateDeath != "" ? dateDeath : "Неизвестно"}`;
+    placeElement.querySelector(".card__deathPlace").textContent = `Место смерти: ${deathPlace != "" ? deathPlace : "Неизвестно"}`;
 
     placesContainer.prepend(placeElement);
   }

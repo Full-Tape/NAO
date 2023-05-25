@@ -1,7 +1,7 @@
 {
     "cards": [
         {
-            "image":"/img/face.jpg",
+            "image": "/img/face.jpg",
             "firstName": "Васильев",
             "secondName": "Данил",
             "thirdName": "Юрьевич",
@@ -9,6 +9,114 @@
             "dateOfBirth": "17.09.2000",
             "rank": "Рядовой",
             "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/nikolay.jpg",
+            "firstName": "Белякович",
+            "secondName": "Николай",
+            "thirdName": "",
+            "placeOfBirth": "Нарьян-мар",
+            "dateOfBirth": "10.07.1997",
+            "rank": "Ефрейтор",
+            "placeOfCall": "Нарьян-мар",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/face.jpg",
+            "firstName": "Васильев",
+            "secondName": "Данил",
+            "thirdName": "Юрьевич",
+            "placeOfBirth": "Мурманск",
+            "dateOfBirth": "17.09.2000",
+            "rank": "Рядовой",
+            "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/nikolay.jpg",
+            "firstName": "Белякович",
+            "secondName": "Николай",
+            "thirdName": "",
+            "placeOfBirth": "Нарьян-мар",
+            "dateOfBirth": "10.07.1997",
+            "rank": "Ефрейтор",
+            "placeOfCall": "Нарьян-мар",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/face.jpg",
+            "firstName": "Васильев",
+            "secondName": "Данил",
+            "thirdName": "Юрьевич",
+            "placeOfBirth": "Мурманск",
+            "dateOfBirth": "17.09.2000",
+            "rank": "Рядовой",
+            "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/nikolay.jpg",
+            "firstName": "Белякович",
+            "secondName": "Николай",
+            "thirdName": "",
+            "placeOfBirth": "Нарьян-мар",
+            "dateOfBirth": "10.07.1997",
+            "rank": "Ефрейтор",
+            "placeOfCall": "Нарьян-мар",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/face.jpg",
+            "firstName": "Васильев",
+            "secondName": "Данил",
+            "thirdName": "Юрьевич",
+            "placeOfBirth": "Мурманск",
+            "dateOfBirth": "17.09.2000",
+            "rank": "Рядовой",
+            "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/nikolay.jpg",
+            "firstName": "Белякович",
+            "secondName": "Николай",
+            "thirdName": "",
+            "placeOfBirth": "Нарьян-мар",
+            "dateOfBirth": "10.07.1997",
+            "rank": "Ефрейтор",
+            "placeOfCall": "Нарьян-мар",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/face.jpg",
+            "firstName": "Васильев",
+            "secondName": "Данил",
+            "thirdName": "Юрьевич",
+            "placeOfBirth": "Мурманск",
+            "dateOfBirth": "17.09.2000",
+            "rank": "Рядовой",
+            "placeOfCall": "Мурманск",
+            "dateDeath": "",
+            "deathPlace": ""
+        },
+        {
+            "image": "/img/nikolay.jpg",
+            "firstName": "Белякович",
+            "secondName": "Николай",
+            "thirdName": "",
+            "placeOfBirth": "Нарьян-мар",
+            "dateOfBirth": "10.07.1997",
+            "rank": "Ефрейтор",
+            "placeOfCall": "Нарьян-мар",
             "dateDeath": "",
             "deathPlace": ""
         }
