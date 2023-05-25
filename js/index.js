@@ -62,7 +62,7 @@ function showInfo(data) {
 
   function renderCard({image,names,placeOfBirth,dateOfBirth,rank,placeOfCall,dateDeath,deathPlace}) {
     const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
-    placeElement.querySelector(".card__img").src = "img/face.jpg";
+    placeElement.querySelector(".card__img").src = image != ("" && undefined) ? image : "img/face.jpg";
     placeElement.querySelector(".card__title").textContent = names;
     placeElement.querySelector(".card__placeOfBirth").textContent = `Место рождения: ${placeOfBirth != ("" && undefined) ? placeOfBirth : "Неизвестно"}`;
     placeElement.querySelector(".card__dateOfBirth").textContent = `Дата рождения: ${dateOfBirth != ("" && undefined) ? dateOfBirth: "Неизвестно"}`;
