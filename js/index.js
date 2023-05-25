@@ -11,6 +11,7 @@ function showInfo(data) {
 
   const placeInfo = allCards.map(function (item) {
     return {
+      image: item.image,
       firstName: item.firstName,
       secondName: item.secondName,
       thirdName: item.thirdName,
@@ -22,8 +23,9 @@ function showInfo(data) {
     placeInfo.forEach(renderCard);
   }
 
-  function renderCard({firstName,secondName,thirdName,dateOfBirth}) {
+  function renderCard({image,firstName,secondName,thirdName,dateOfBirth}) {
     const placeElement = placeTemplate.querySelector(".card").cloneNode(true);
+    placeElement.querySelector(".card__img").src = image;
     placeElement.querySelector(".card__title").textContent = firstName;
     placeElement.querySelector(".card__dateOfBirth").textContent = "Дата рождения: " + dateOfBirth;
 
