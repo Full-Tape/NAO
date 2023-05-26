@@ -1,47 +1,39 @@
 // let API = "https://raw.githubusercontent.com/Full-Tape/NAO/main";
-fetch(`card.json`)
+let API = "card.json";
+
+const placeAside = document.querySelector(".aside");
+const placeAllCards = document.querySelector(".allCards");
+const placeFindCards = document.querySelector(".findCards");
+const placeInvalidFind = document.querySelector(".invalidFind");
+const invalidFind__title = document.querySelector(".invalidFind__title");
+const placeTemplate = document.querySelector(".template");
+
+const form = document.forms.filterCard;
+const formInputs = form.querySelectorAll(".aside__form-input");
+const formButton = form.elements.btnFilter;
+
+for(let inputKey = 0; inputKey < formInputs.length; inputKey ++){
+  const formInputsPlaceholder = formInputs[inputKey].placeholder;
+  formInputs[inputKey].addEventListener("focus", () => formInputs[inputKey].placeholder = "");
+  formInputs[inputKey].addEventListener("blur", () => formInputs[inputKey].placeholder = formInputsPlaceholder)	;
+}
+
+fetch(API)
   .then((response) => response.json())
-  .then((data) => showInfo(data));
+  .then((data) => showInfo(data))
+  .catch((e)=>notFindCards());
+
+function notFindCards(){
+  invalidFind__title.textContent = "Сервер не отвечает";
+  placeAside.classList.add("sectionHidden");
+  placeAllCards.classList.add("sectionHidden");
+  placeFindCards.classList.add("sectionHidden");
+  placeInvalidFind.classList.remove("sectionHidden");
+}
+
+
 
 function showInfo(data) {
-  const placeAllCards = document.querySelector(".allCards");
-  const placeFindCards = document.querySelector(".findCards");
-  const placeInvalidFind = document.querySelector(".invalidFind");
-  const placeTemplate = document.querySelector(".template");
-
-  const form = document.forms.filterCard;
-  const formInputs = form.querySelectorAll(".aside__form-input");
-  const formButton = form.elements.btnFilter;
-
-	for(let inputKey = 0; inputKey < formInputs.length; inputKey ++){
-		const formInputsPlaceholder = formInputs[inputKey].placeholder;
-		formInputs[inputKey].addEventListener("focus", () => formInputs[inputKey].placeholder = "");
-		formInputs[inputKey].addEventListener("blur", () => formInputs[inputKey].placeholder = formInputsPlaceholder)	;
-	}
-
-  async function postData(newData){
-    let response = await fetch(`card.json`,{
-      method: 'POST',
-      body: newData
-    });
-
-    return await response.json()
-  }
-
-
-  function sendData(){
-
-    let newSD = {
-      firstName:"Васильев"
-    }
-
-
-    let aa = JSON.stringify(newSD)
-    postData(aa)
-  }
-
-  sendData()
-
   let allCards = data.cards;
 
   allCards.forEach((cardInfo) => {
@@ -73,6 +65,7 @@ function showInfo(data) {
     dateDeath = formInputs[7].value,
     deathPlace = formInputs[8].value
   ) {
+
 		let emptyFind = true;
     allCards.forEach((el) => {
       const regexFN = RegExp(firstName, "gi");
@@ -109,7 +102,7 @@ function showInfo(data) {
 
   formButton.addEventListener("click", (e) => {
     e.preventDefault();
-
+    // sendData()
 		let validFind = false;
 
 		formInputs.forEach((input)=>{
@@ -128,24 +121,27 @@ function showInfo(data) {
 			placeAllCards.classList.add("sectionHidden")
 			placeFindCards.classList.remove("sectionHidden")
 			placeInvalidFind.classList.add("sectionHidden")
+      
 			findCard();
 		}
   });
+
+  // function postData(newData){
+  //   fetch(API,{
+  //     method: 'POST',
+  //     body: JSON.stringify(newData),
+  //     headers: {'Content-Type': 'application/json'}
+  //   })
+  // }
+
+  // function sendData(){    
+  //   const formData = new FormData(form)
+  //   const datas = {}
+
+  //   for(const [key,value] of formData){
+  //     datas[key] = value
+  //   }
+
+  //   postData(datas)
+  // }
 }
-
-//   const placeInfo = allCards.map(function (item) {
-//     return {
-//       image: item.image,
-//       name: `${item.firstName} ${item.secondName} ${item.thirdName}`,
-//       placeOfBirth: item.placeOfBirth,
-//       dateOfBirth: item.dateOfBirth,
-//       rank: item.rank,
-//       placeOfCall: item.placeOfCall,
-//       dateDeath: item.dateDeath,
-//       deathPlace: item.deathPlace,
-//     };
-//   });
-
-//   function render() {
-//     placeInfo.forEach(renderCard);
-//   }
