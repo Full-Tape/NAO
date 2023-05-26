@@ -1,5 +1,5 @@
-let API = "https://raw.githubusercontent.com/Full-Tape/NAO/main";
-fetch(`${API}/card.json`)
+// let API = "https://raw.githubusercontent.com/Full-Tape/NAO/main";
+fetch(`/card.json`)
   .then((response) => response.json())
   .then((data) => showInfo(data));
 
@@ -18,6 +18,29 @@ function showInfo(data) {
 		formInputs[inputKey].addEventListener("focus", () => formInputs[inputKey].placeholder = "");
 		formInputs[inputKey].addEventListener("blur", () => formInputs[inputKey].placeholder = formInputsPlaceholder)	;
 	}
+
+  async function postData(newData){
+    let response = await fetch(`/card.json`,{
+      method: 'POST',
+      body: newData
+    });
+
+    return await response.json()
+  }
+
+
+  function sendData(){
+
+    let newSD = {
+      firstName:"Васильев"
+    }
+
+
+    let aa = JSON.stringify(newSD)
+    postData(aa)
+  }
+
+  sendData()
 
   let allCards = data.cards;
 
