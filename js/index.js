@@ -1,5 +1,5 @@
 // let API = "https://raw.githubusercontent.com/Full-Tape/NAO/main";
-fetch(`/card.json`)
+fetch(`card.json`)
   .then((response) => response.json())
   .then((data) => showInfo(data));
 
@@ -20,7 +20,7 @@ function showInfo(data) {
 	}
 
   async function postData(newData){
-    let response = await fetch(`/card.json`,{
+    let response = await fetch(`card.json`,{
       method: 'POST',
       body: newData
     });
